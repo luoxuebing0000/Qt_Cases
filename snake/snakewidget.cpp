@@ -1,8 +1,4 @@
 #include "snakewidget.h"
-/*
- * 欢迎加入QT爱好者交流群：271251545
- * 代码写的匆忙，没有做图片，望见谅，仅仅提供一个思路而已，感谢李雅静老师，此代码学习自李雅静老师的视频
- */
 
 SnakeWidget::SnakeWidget(QWidget *parent)
     : QWidget(parent)
