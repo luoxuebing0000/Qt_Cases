@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imgs/background.jpg</file>
+        <file>imgs/black.png</file>
+        <file>imgs/white.png</file>
+        <file>imgs/border.jpg</file>
+    </qresource>
+</RCC>

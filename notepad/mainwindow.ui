@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>notepad++</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>FIle(&amp;F)</string>
+    </property>
+    <widget class="QMenu" name="menuRecent_Files_R">
+     <property name="title">
+      <string>Recent Files(R)</string>
+     </property>
+     <addaction name="actionNo_Recent_Files"/>
+    </widget>
+    <addaction name="actionNew_N"/>
+    <addaction name="actionOpen_O"/>
+    <addaction name="menuRecent_Files_R"/>
+    <addaction name="actionSave_S"/>
+    <addaction name="actionSave_As_A"/>
+    <addaction name="actionClose_C"/>
+    <addaction name="actionPrint_View_V"/>
+    <addaction name="actionPrint_P"/>
+    <addaction name="action_Export_PDF"/>
+    <addaction name="actionExit_X"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_E">
+    <property name="title">
+     <string>Edit(&amp;E)</string>
+    </property>
+    <widget class="QMenu" name="menuCopy_to_Clipboard_O">
+     <property name="title">
+      <string>Copy to Clipboard(&amp;O)</string>
+     </property>
+     <addaction name="actionCopy_whole_road_to_clipboard_C"/>
+     <addaction name="actionCopy_file_name_to_clipboard_F"/>
+     <addaction name="actionCopy_directory_to_clipboard_D"/>
+    </widget>
+    <widget class="QMenu" name="menuToggle_Case_N">
+     <property name="title">
+      <string>Toggle Case(&amp;N)</string>
+     </property>
+     <addaction name="actionto_Upper"/>
+     <addaction name="actionto_Lower"/>
+    </widget>
+    <addaction name="actionUndo_U"/>
+    <addaction name="actionRedo_R"/>
+    <addaction name="actionCut_T"/>
+    <addaction name="actionCopy_C"/>
+    <addaction name="actionPaste_P"/>
+    <addaction name="actionDelete_D"/>
+    <addaction name="actionSelect_All_A"/>
+    <addaction name="menuCopy_to_Clipboard_O"/>
+    <addaction name="menuToggle_Case_N"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch_S">
+    <property name="title">
+     <string>Search(&amp;S)</string>
+    </property>
+    <addaction name="actionFind_F"/>
+    <addaction name="actionAdvanced_Search"/>
+    <addaction name="actionFind_Next_N"/>
+    <addaction name="actionFind_Previous_P"/>
+    <addaction name="actionReplace_R"/>
+    <addaction name="actionJump_to_row_G"/>
+   </widget>
+   <widget class="QMenu" name="menuView_V">
+    <property name="title">
+     <string>View(&amp;V)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFormat_C">
+    <property name="title">
+     <string>Format(C)</string>
+    </property>
+    <addaction name="actionBold_B"/>
+    <addaction name="actionItalic_I"/>
+    <addaction name="actionUnderline_U"/>
+    <addaction name="action_Left"/>
+    <addaction name="action_Center"/>
+    <addaction name="action_Right"/>
+    <addaction name="action_Justify"/>
+    <addaction name="action_Color"/>
+   </widget>
+   <widget class="QMenu" name="menuLanguage_L">
+    <property name="title">
+     <string>Language(L)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSetting_G">
+    <property name="title">
+     <string>Setting(G)</string>
+    </property>
+    <addaction name="actiontoUTF8"/>
+    <addaction name="actionGBK"/>
+    <addaction name="actiontoGB2312"/>
+    <addaction name="actiontoUTF_12"/>
+    <addaction name="actiontoUTF_32"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_TextEdit"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="menuEdit_E"/>
+   <addaction name="menuSearch_S"/>
+   <addaction name="menuView_V"/>
+   <addaction name="menuFormat_C"/>
+   <addaction name="menuLanguage_L"/>
+   <addaction name="menuSetting_G"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionNew_N">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/filenew.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>New(&amp;N)</string>
+   </property>
+  </action>
+  <action name="actionOpen_O">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/fileopen.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionSave_S">
+   <property name="text">
+    <string>Save(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionSave_As_A">
+   <property name="text">
+    <string>Save As(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionSave_ALl_L">
+   <property name="text">
+    <string>Save ALl(&amp;L)</string>
+   </property>
+  </action>
+  <action name="actionClose_C">
+   <property name="text">
+    <string>Close(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionClose_All_L">
+   <property name="text">
+    <string>Close All(&amp;L)</string>
+   </property>
+  </action>
+  <action name="actionPrint_P">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/fileprint.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Print(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionExit_X">
+   <property name="text">
+    <string>Exit(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionUndo_U">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/editundo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Undo(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionRedo_R">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/editredo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Redo(&amp;R)</string>
+   </property>
+  </action>
+  <action name="actionCut_T">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/editcut.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Cut(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionCopy_C">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/editcopy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Copy(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionPaste_P">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/win/editpaste.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Paste(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionDelete_D">
+   <property name="text">
+    <string>Delete(&amp;D)</string>
+   </property>
+  </action>
+  <action name="actionSelect_All_A">
+   <property name="text">
+    <string>Select All(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionCopy_whole_road_to_clipboard_C">
+   <property name="text">
+    <string>Copy whole road to clipboard(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionCopy_file_name_to_clipboard_F">
+   <property name="text">
+    <string>Copy file name to clipboard(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionCopy_directory_to_clipboard_D">
+   <property name="text">
+    <string>Copy directory to clipboard(&amp;D)</string>
+   </property>
+  </action>
+  <action name="actionFind_F">
+   <property name="text">
+    <string>Find(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionAdvanced_Search">
+   <property name="text">
+    <string>Advanced Search</string>
+   </property>
+  </action>
+  <action name="actionFind_Next_N">
+   <property name="text">
+    <string>Find Next(&amp;N)</string>
+   </property>
+  </action>
+  <action name="actionFind_Previous_P">
+   <property name="text">
+    <string>Find Previous(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionReplace_R">
+   <property name="text">
+    <string>Replace(&amp;R)</string>
+   </property>
+  </action>
+  <action name="actionJump_to_row_G">
+   <property name="text">
+    <string>Jump to row(&amp;G)</string>
+   </property>
+  </action>
+  <action name="actionAbout_TextEdit">
+   <property name="text">
+    <string>About TextEdit</string>
+   </property>
+  </action>
+  <action name="actionto_Upper">
+   <property name="text">
+    <string>to Upper</string>
+   </property>
+  </action>
+  <action name="actionto_Lower">
+   <property name="text">
+    <string>to Lower</string>
+   </property>
+  </action>
+  <action name="actionBold_B">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Bold(&amp;B)</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionItalic_I">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Italic(&amp;I)</string>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+    </font>
+   </property>
+  </action>
+  <action name="actionUnderline_U">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Underline(&amp;U)</string>
+   </property>
+   <property name="font">
+    <font>
+     <underline>true</underline>
+    </font>
+   </property>
+  </action>
+  <action name="action_Left">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Left</string>
+   </property>
+  </action>
+  <action name="action_Center">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Center</string>
+   </property>
+  </action>
+  <action name="action_Right">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>_Right</string>
+   </property>
+  </action>
+  <action name="action_Justify">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>_Justify</string>
+   </property>
+  </action>
+  <action name="action_Color">
+   <property name="text">
+    <string>&amp;Color</string>
+   </property>
+  </action>
+  <action name="actionNo_Recent_Files">
+   <property name="text">
+    <string>No Recent Files</string>
+   </property>
+  </action>
+  <action name="actionPrint_View_V">
+   <property name="text">
+    <string>Print View(&amp;V)</string>
+   </property>
+  </action>
+  <action name="action_Export_PDF">
+   <property name="text">
+    <string>&amp;Export PDF</string>
+   </property>
+  </action>
+  <action name="actiontoUTF8">
+   <property name="text">
+    <string>toUTF8</string>
+   </property>
+  </action>
+  <action name="actionGBK">
+   <property name="text">
+    <string>toGBK</string>
+   </property>
+  </action>
+  <action name="actiontoGB2312">
+   <property name="text">
+    <string>toGB2312</string>
+   </property>
+  </action>
+  <action name="actiontoUTF_12">
+   <property name="text">
+    <string>toUTF-16</string>
+   </property>
+  </action>
+  <action name="actiontoUTF_32">
+   <property name="text">
+    <string>toUTF-32</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

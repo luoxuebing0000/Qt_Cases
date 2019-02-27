@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>img/icon.ico</file>
+        <file>img/start.jpeg</file>
+        <file>img/tcs.jpg</file>
+        <file>img/exit.png</file>
+        <file>img/background.jpg</file>
+        <file>img/move.png</file>
+        <file>img/apple.jpg</file>
+        <file>img/body.jpg</file>
+    </qresource>
+</RCC>

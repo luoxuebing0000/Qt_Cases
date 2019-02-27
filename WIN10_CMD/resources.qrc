@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imgs/WIN_CMD_ICON.PNG</file>
+        <file>imgs/WIN_CMD_LOGO.PNG</file>
+        <file>imgs/tips.PNG</file>
+    </qresource>
+</RCC>
